@@ -1,4 +1,3 @@
-import { personajes } from "./personajes.js";
 import { Personaje } from "./personaje.js";
 import { Consejero } from "./asesor.js";
 import { Escudero } from "./escudero.js";
@@ -13,7 +12,9 @@ const b = new Escudero('Bronn','gitano', 37,'vivo');
 b.patron = jL;
 tL.patron = dT;
 const personajes = [jB,jL,dT,tL,b];
-function escribirFicha(personajes) {
+
+
+const plantilla =
     `<li class="character col">
     <div class="card character__card">
       <img
@@ -50,6 +51,11 @@ function escribirFicha(personajes) {
       </div>
       <i class="emoji"></i>
     </div>
-  </li>`
+  </li>`;
 
+
+for (let i = 0; i < personajes.length; i++) {
+   document.body.innerHTML = plantilla; 
+    
 }
+

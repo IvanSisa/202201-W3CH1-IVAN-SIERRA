@@ -1,3 +1,4 @@
+import { Personaje } from "./personaje.js";
 export class Escudero extends Personaje{
     constructor(nombre,familia,edad,estado,patron,servilismo){
       super(nombre,familia,edad,estado);
